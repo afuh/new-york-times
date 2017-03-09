@@ -1,11 +1,43 @@
-nav
+.top-navbar
   position: fixed
-  width: 1600px
+  width: 100%
+  max-width: inherit
+  background: #fff
 
 .nav1
-  background: pink
   height: 47px
+  text-align: center
+  justify-content: space-between
+  .button
+    height: 100%
+    text-transform: uppercase
+  .logo
+    flex-grow: 1
 
 .nav2
-  background: green
   min-height: 82px
+  overflow: scroll
+  border:
+    top: 1px solid $lightgray
+    bottom: 1px solid $lightgray
+  justify-content: space-between
+  align-items: center
+  .related-box
+    width: 100%
+    min-width: 229px
+  .related-box:not(:first-child)
+    border-left: 1px solid $lightgray
+
+.related-box
+  cursor: pointer
+  padding: 5px
+  img
+    margin-right: 4px
+    width: 65px
+    height: 65px
+    float: left
+  p
+    margin: 2px
+    padding-top: 10px
+    font-size: 13px
+    line-height: 1.2
