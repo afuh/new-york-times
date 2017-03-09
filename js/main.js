@@ -1,1 +1,3 @@
-"use strict";
+$(function(){
+  $("#article").load("article.html");
+});

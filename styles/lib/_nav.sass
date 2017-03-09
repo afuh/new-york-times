@@ -20,17 +20,17 @@
   border:
     top: 1px solid $lightgray
     bottom: 1px solid $lightgray
+    right: 1px solid #e2e2e2
   justify-content: space-between
   align-items: center
-  .related-box
-    width: 100%
-    min-width: 229px
-  .related-box:not(:first-child)
-    border-left: 1px solid $lightgray
 
 .related-box
+  width: 100%
+  min-width: 229px
   cursor: pointer
   padding: 5px
+  &:not(:first-child)
+    border-left: 1px solid $lightgray
   img
     margin-right: 4px
     width: 65px

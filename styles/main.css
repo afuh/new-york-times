@@ -68,6 +68,9 @@ a:hover {
 #page {
   max-width: 1600px;
   margin: 0 auto;
+  box-shadow: -1px 0 4px 0 #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
 }
 
 .top-navbar {
@@ -101,6 +104,7 @@ a:hover {
   overflow: scroll;
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
+  border-right: 1px solid #e2e2e2;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -109,18 +113,15 @@ a:hover {
           align-items: center;
 }
 
-.nav2 .related-box {
+.related-box {
   width: 100%;
   min-width: 229px;
-}
-
-.nav2 .related-box:not(:first-child) {
-  border-left: 1px solid #d8d8d8;
-}
-
-.related-box {
   cursor: pointer;
   padding: 5px;
+}
+
+.related-box:not(:first-child) {
+  border-left: 1px solid #d8d8d8;
 }
 
 .related-box img {
@@ -138,15 +139,41 @@ a:hover {
 }
 
 main {
-  background: lightgray;
   margin: 130px auto 20px;
   max-width: 1125px;
 }
 
-main {
-  width: 1125px;
-  height: 1000px;
-  border: 2px solid black;
+main .image img {
+  width: 100%;
+}
+
+.diagram {
+  background: url("../images/diagram.png") no-repeat;
+  background-size: 945px 576px;
+  height: 576px;
+  width: 945px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.diagram .text-box {
+  width: 228px;
+}
+
+.diagram .text-box span {
+  position: relative;
+  top: 50%;
+  font-size: 13px;
+  letter-spacing: .05em;
+}
+
+.diagram .text-box span:first-child {
+  font-weight: bold;
 }
 
 #more {
