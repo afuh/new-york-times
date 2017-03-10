@@ -1,9 +1,91 @@
+/** =================== Story =================== **/
+
 main
+  border-top: 1px solid black
   margin: 130px auto 20px
   max-width: 1125px
-  .image
+  .story-image
     img
       width: 100%
+  .caption
+    max-width: 650px
+    color: $gray
+    font:
+      size: 14px
+      family: georgia,times,serif
+    span:last-child
+      font-size: 11px
+
+.story-header
+  h1
+    margin-bottom: 0
+    border-bottom: 1px solid $lightgray
+    line-height: 2em
+    font-size: 32px
+    font:
+      family: georgia, times, serif
+      style: italic
+  h3
+    font-size: 13px
+    line-height: 1rem
+    letter-spacing: 0.05em
+  a
+    color: $black
+    text-transform: uppercase
+
+.undertitle
+  justify-content: space-between
+  align-items: center
+  padding: 8px 0
+  .author
+    font-size: 11px
+    span, a
+      font-weight: bold
+  time
+    margin-left: 10px
+  .social
+    span
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      margin: 5px
+      height: 28px
+      width: 28px
+      font-size: 14px
+      border-radius: 50%
+      transition: all 0.2s
+      &:not(:nth-last-child(-n+2))
+        background: $black
+        color: #fff
+        &:hover
+          background: $link
+    span:nth-last-child(-n+2)
+        &:hover
+          background: $black
+          color: #fff
+
+.story
+  width: 575px
+  margin: 25px auto 25px 75px
+  p
+    line-height: 1.6rem
+    font:
+      family: georgia,times,serif
+      size: 17px
+
+
+.story-interrupter
+  border:
+    top: 1px solid $lightgray
+    bottom: 1px solid $lightgray
+  .title
+    h2
+      font-size: 20px
+    p
+      color: $gray
+      font-size: 14px
+      max-width: 900px
 
 .diagram
   background: url("../images/diagram.png") no-repeat
@@ -22,3 +104,23 @@ main
       letter-spacing: .05em
     span:first-child
       font-weight: bold
+
+.credit
+  margin-top: 25px
+  font-size: 11px
+  color: $gray
+
+hr
+  width: 60px
+  border-color: $black
+  float: left
+  margin-bottom: 20px
+
+.story-footer
+  clear: left
+  p, a
+    font:
+      family: arial,helvetica,sans-serif
+      size: 11px
+    color: $gray
+    line-height: 1.1em

@@ -1,27 +1,58 @@
+/** =================== Navbar =================== **/
+
 .top-navbar
+  z-index: 10000
   position: fixed
   width: 100%
-  max-width: inherit
+  max-width: 1438px
   background: #fff
 
 .nav1
   height: 47px
   text-align: center
-  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid $lightgray
   .button
-    height: 100%
+    transition: background-color 0.3s
     text-transform: uppercase
   .logo
+    cursor: pointer
     flex-grow: 1
+
+.sections
+  button
+    padding: 0 14px
+    position: relative
+    left: -20px
+    background: #fff
+    box-shadow: 0 3px 2px 0 rgba(0,0,0,0.06), inset -1px -1px 1px 0 rgba(0,0,0,0.02)
+
+.home, .search, .options
+  button
+    border: none
+    background: #fff
+    box-shadow: none
+    &:hover
+      box-shadow: none
+
+.options
+  button
+    font-size: 18px
+
+.subscribe, .log
+    button
+      background: #6288a5
+      border-color: #4d7b9f
+      color: #fff
+      &:hover
+        background: #326891
+        border-color: #265e8b
 
 .nav2
   min-height: 82px
   overflow: scroll
-  border:
-    top: 1px solid $lightgray
-    bottom: 1px solid $lightgray
-    right: 1px solid #e2e2e2
-  justify-content: space-between
+  border-bottom: 1px solid $lightgray
+  box-shadow: 0 4px 4px rgba(0,0,0,0.06)
   align-items: center
 
 .related-box
@@ -31,6 +62,9 @@
   padding: 5px
   &:not(:first-child)
     border-left: 1px solid $lightgray
+  &:hover
+    p
+      text-decoration: underline
   img
     margin-right: 4px
     width: 65px
@@ -38,6 +72,6 @@
     float: left
   p
     margin: 2px
-    padding-top: 10px
+    color: $black
     font-size: 13px
     line-height: 1.2
